@@ -1,0 +1,13 @@
+<h1>Restaurants Listing</h1>
+
+<% @restaurants.each do |resto| %>
+<ul>
+  <h3><%= resto.name %></h3>
+  <li>Address : <%= resto.address %></li>
+  <li>Cusine: <%= resto.category.capitalize %></li>
+</ul>
+<% end %>
+
+<div>
+  <%= link_to "Add a new restaurant", restaurants_new_path, class: "btn btn-primary"%>
+</div>
